@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.CreateEventController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="450.0" prefWidth="400.0">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="0.0" prefWidth="117.0" text="New Event">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldName" promptText="Name">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="textFieldLocation" promptText="Location">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextArea fx:id="textAreaDescription" prefHeight="200.0" prefWidth="200.0" promptText="Description">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+            <DatePicker fx:id="datePickerDate" promptText="Date" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Button id="button" fx:id="buttonCreateEvent" mnemonicParsing="false" onAction="#createEvent" prefHeight="25.0" prefWidth="60.0" stylesheets="@style/style.css" text="Create " />
+                  <Button id="button" fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="60.0" stylesheets="@style/style.css" text="Back" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

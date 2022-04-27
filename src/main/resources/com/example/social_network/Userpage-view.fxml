@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.UserPageController">
+   <children>
+      <HBox prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <VBox id="optionsBorder" alignment="CENTER" prefHeight="434.0" prefWidth="189.0" spacing="15.0" stylesheets="@style/style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="188.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/searchUsersIcon.jpg" />
+                           </image></ImageView>
+                        <Button id="button" fx:id="buttonSearchUsers" mnemonicParsing="false" onAction="#showSearchUsersScene" prefHeight="32.0" prefWidth="106.0" stylesheets="@style/style.css" text="Search users">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="126.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.5; -fx-scale-y: 0.5;">
+                           <image>
+                              <Image url="@images/friendsIcon.png" />
+                           </image></ImageView>
+                        <Button id="button" fx:id="buttonShowFriends" mnemonicParsing="false" onAction="#showFriendsScene" prefHeight="32.0" prefWidth="105.0" stylesheets="@style/style.css" text="Friends">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="94.0" prefHeight="0.0" prefWidth="188.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/chatsIcon.png" />
+                           </image></ImageView>
+                        <Button id="button" fx:id="buttonChats" mnemonicParsing="false" onAction="#showChatsScene" prefWidth="106.0" stylesheets="@style/style.css" text="Chats">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="188.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/eventsIcon.jpg" />
+                           </image></ImageView>
+                        <Button id="button" fx:id="buttonEvents" mnemonicParsing="false" onAction="#showEventsScene" prefWidth="106.0" stylesheets="@style/style.css" text="Events">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="150.0" prefHeight="0.0" prefWidth="188.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logoutIcon.jpg" />
+                           </image></ImageView>
+                        <Button id="button" fx:id="buttonlogout" mnemonicParsing="false" onAction="#logout" prefWidth="106.0" stylesheets="@style/style.css" text="Logout">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="500.0" prefWidth="513.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="512.0">
+                     <children>
+                        <Button fx:id="buttonRequest" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#showFriendRequestsScene" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imageViewNotificationsBell" fitHeight="39.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/notificationsBell.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="444.0" prefWidth="512.0">
+                     <children>
+                        <ImageView fitHeight="135.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@images/defaultAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="labelUser" text="test test" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets top="20.0" />
+                           </opaqueInsets>
+                           <children>
+                              <ImageView fitHeight="15.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/friendsIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelNumberOfFriends" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/statisticsIcon.jpg" />
+                           </image></ImageView>
+                        <Button id="button" fx:id="buttonRapoarte" mnemonicParsing="false" onAction="#showRapoarteScene" prefHeight="31.0" prefWidth="106.0" stylesheets="@style/style.css" text="User Activity">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="button" fx:id="buttonRapoarte1" mnemonicParsing="false" onAction="#showRapoartePrietenScene" prefHeight="31.0" prefWidth="104.0" stylesheets="@style/style.css" text="Friend Activity" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

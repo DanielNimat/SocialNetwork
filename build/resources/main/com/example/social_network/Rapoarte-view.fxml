@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.RapoarteController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="644.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="408.0" prefWidth="205.0" spacing="15.0">
+                     <children>
+                        <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="150.0" />
+                        <Button id="loginButton" fx:id="exportButton1" alignment="CENTER" mnemonicParsing="false" onAction="#createPDF" prefHeight="25.0" prefWidth="150.0" stylesheets="@style/style.css" text="Export PDF" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="320.0" prefWidth="205.0">
+                     <children>
+                        <Button id="loginButton" fx:id="backButton" alignment="CENTER" maxWidth="336.0" mnemonicParsing="false" onAction="#back" prefHeight="34.0" prefWidth="86.0" stylesheets="@style/style.css" text="back" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="933.0">
+               <children>
+                  <TableView fx:id="tableViewFriends" prefHeight="296.0" prefWidth="495.0" stylesheets="@style/style.css">
+                     <columns>
+                        <TableColumn fx:id="tableColumnFirstName" prefWidth="97.99999749660492" text="FirstName" />
+                        <TableColumn fx:id="tableColumnLastName" prefWidth="94.00000762939453" text="LastName" />
+                        <TableColumn fx:id="tableColumnFriendsSince" prefWidth="127.99998474121094" text="Friends Since" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="tableViewMessages" prefHeight="289.0" prefWidth="495.0" stylesheets="@style/style.css">
+                     <columns>
+                        <TableColumn fx:id="tableColumnFirstNameMessage" prefWidth="103.3333410024643" text="FirstName" />
+                        <TableColumn fx:id="tableColumnLastNameMessage" prefWidth="93.33332061767578" text="LastName" />
+                        <TableColumn fx:id="tableColumnDate" prefWidth="96.0" text="Date" />
+                        <TableColumn fx:id="tableColumnMessage" prefWidth="200.00001017252606" text="Message" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pagination fx:id="pagination2" layoutX="205.0" layoutY="253.0" pageCount="20" prefHeight="247.0" prefWidth="495.0" />
+      <Pagination fx:id="pagination1" layoutX="205.0" layoutY="1.0" pageCount="20" prefHeight="265.0" prefWidth="495.0" />
+   </children>
+</AnchorPane>

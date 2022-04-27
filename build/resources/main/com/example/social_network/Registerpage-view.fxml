@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.RegisterController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="329.0" prefWidth="456.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="354.0" prefWidth="376.0">
+                     <children>
+                        <VBox id="pane" alignment="CENTER" prefHeight="397.0" prefWidth="325.0" spacing="20.0" style="-fx-background-color: white;" stylesheets="@style/style.css">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/registerUser.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#716f6f" strokeType="OUTSIDE" strokeWidth="0.0" text="Register">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/emailIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="emailText" maxWidth="345.0" prefHeight="40.0" prefWidth="291.0" promptText="E-mail">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="401.0" spacing="12.0">
+                                 <children>
+                                    <ImageView fitHeight="27.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8; -fx-scale-y: 0.8;">
+                                       <image>
+                                          <Image url="@images/passwordIcon.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <PasswordField fx:id="passwordText" maxWidth="294.0" prefHeight="40.0" prefWidth="345.0" promptText="Password">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </PasswordField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="40.0" prefWidth="401.0" spacing="12.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/register.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="firstnameText" accessibleRole="TEXT_FIELD" maxWidth="294.0" prefHeight="40.0" prefWidth="345.0" promptText="First Name">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="191.0" prefHeight="40.0" prefWidth="401.0" spacing="12.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/register.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="lastnameText" accessibleRole="TEXT_FIELD" maxWidth="294.0" prefHeight="40.0" prefWidth="345.0" promptText="Last Name">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Button id="loginButton" alignment="CENTER" maxWidth="336.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="33.0" prefWidth="336.0" stylesheets="@style/style.css" text="Register" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="loginButton" alignment="CENTER" maxWidth="336.0" mnemonicParsing="false" onAction="#back" prefHeight="34.0" prefWidth="292.0" stylesheets="@style/style.css" text="Back" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="252.0" prefHeight="40.0" prefWidth="401.0" spacing="12.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="42.0" left="50.0" right="50.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="78.0" prefWidth="700.0">
+               <children>
+                  <Label fx:id="labelInfo">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

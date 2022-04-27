@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.RapoartePrietenController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="419.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="305.0" prefWidth="191.0" spacing="15.0">
+                     <children>
+                        <ComboBox fx:id="comboBox" prefHeight="25.0" prefWidth="150.0" promptText="Prieteni" />
+                        <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="150.0" />
+                        <Button id="loginButton" fx:id="exportButton" alignment="CENTER" mnemonicParsing="false" onAction="#createPDF" prefHeight="25.0" prefWidth="150.0" stylesheets="@style/style.css" text="Export PDF" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="191.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Button id="loginButton" fx:id="backButton" alignment="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="150.0" stylesheets="@style/style.css" text="back" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="702.0">
+               <children>
+                  <TableView fx:id="tableViewMessages" prefHeight="500.0" prefWidth="737.0" stylesheets="@style/style.css">
+                     <columns>
+                        <TableColumn fx:id="tableColumnFirstNameMessage" prefWidth="97.33336126804352" text="FirstName" />
+                        <TableColumn fx:id="tableColumnLastNameMessage" prefWidth="93.33333587646484" text="LastName" />
+                        <TableColumn fx:id="tableColumnDate" prefWidth="82.00001525878906" text="Date" />
+                        <TableColumn fx:id="tableColumnMessage" prefWidth="233.33333333333331" text="Message" />
+                     </columns>
+                  </TableView>
+                  <Pagination fx:id="pagination" prefHeight="500.0" prefWidth="327.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

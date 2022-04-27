@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.LoginController">
+   <children>
+      <VBox alignment="CENTER" layoutX="110.0" layoutY="119.0" prefHeight="371.0" prefWidth="485.0">
+         <children>
+            <VBox id="pane" alignment="CENTER" prefHeight="287.0" prefWidth="450.0" spacing="20.0" style="-fx-background-color: white;" stylesheets="@style/style.css">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/login_image.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/emailIcon.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="emailText" maxWidth="345.0" prefHeight="40.0" prefWidth="291.0" promptText="E-mail">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="401.0" spacing="12.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.8; -fx-scale-y: 0.8;">
+                           <image>
+                              <Image url="@images/passwordIcon.jpg" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="passwordText" maxWidth="294.0" prefHeight="40.0" prefWidth="345.0" promptText="Password">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Button id="loginButton" fx:id="loginbutton" alignment="CENTER" maxWidth="336.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="33.0" prefWidth="336.0" stylesheets="@style/style.css" text="Login" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="registerButton" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#userRegister" style="-fx-background-color: transparent;" text="Register User" textAlignment="CENTER">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.3552631437778473" green="0.34703946113586426" blue="0.34703946113586426" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <Label fx:id="wrongid" prefHeight="195.0" prefWidth="312.0" textFill="WHITE">
+               <font>
+                  <Font size="34.0" />
+               </font></Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

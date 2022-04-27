@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.FriendsController">
+    <children>
+          <HBox alignment="CENTER" prefHeight="58.0" prefWidth="700.0" spacing="10.0">
+              <children>
+                  <ImageView fx:id="imageViewSearchIcon" fitHeight="53.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                      <HBox.margin>
+                  <Insets left="10.0" />
+                      </HBox.margin>
+                      <image>
+                          <Image url="@images/search-icon.png" />
+                      </image>
+                  </ImageView>
+                  <TextField fx:id="textFieldSearchBar" alignment="CENTER" prefHeight="26.0" prefWidth="423.0" />
+              </children>
+          </HBox>
+          <TableView fx:id="tableViewFriends" layoutY="66.0" prefHeight="141.0" prefWidth="700.0">
+              <columns>
+                  <TableColumn fx:id="tableColumnFirstName" prefWidth="138.0" text="First Name" />
+                  <TableColumn fx:id="tableColumnLastName" prefWidth="138.0" text="Last Name" />
+            <TableColumn fx:id="tableColumnFriendsSince" prefWidth="138.0" text="Friends since" />
+              </columns>
+          </TableView>
+        <VBox alignment="TOP_CENTER" layoutY="253.0" prefHeight="247.0" prefWidth="700.0" spacing="20.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="381.0" prefWidth="700.0" spacing="5.0" style="-fx-border-color: white; -fx-border-radius: 30; -fx-border-insets: 50;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="0.0" prefWidth="250.0" spacing="7.0">
+                            <children>
+                                <Button id="button" alignment="CENTER" mnemonicParsing="false" onAction="#removeFriend" prefHeight="30.0" prefWidth="245.0" stylesheets="@style/style.css" text="Remove Friend" />
+                                <Button id="button" fx:id="buttonBack" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="245.0" stylesheets="@style/style.css" text="Back" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="0.0" prefWidth="250.0" spacing="5.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="133.0">
+                                    <children>
+                                        <Button id="button" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sendMessage" prefHeight="30.0" prefWidth="100.0" stylesheets="@style/style.css" text="Send message" />
+                                        <TextField fx:id="textFieldSendMessage" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: black; -fx-border-color: white;" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="6.0" prefWidth="700.0">
+                                    <children>
+                                        <Button id="button" mnemonicParsing="false" onAction="#addUserToGroup" prefHeight="30.0" prefWidth="100.0" stylesheets="@style/style.css" text="Add to group" />
+                                        <ComboBox fx:id="comboBoxMyGroups" onAction="#comboBoxMyGroupsSelection" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: black; -fx-border-color: white;" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Pagination fx:id="pagination" layoutY="63.0" pageCount="20" prefHeight="241.0" prefWidth="700.0" />
+    </children>
+</AnchorPane>

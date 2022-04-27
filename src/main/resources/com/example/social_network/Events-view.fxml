@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.EventsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="565.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="159.0" style="-fx-background-color: black;" text="All Events" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="listViewEvents" onMouseClicked="#setEventDetails" prefHeight="317.0" prefWidth="140.0" />
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="209.0" style="-fx-background-color: black;" text="My Events" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ListView fx:id="listViewMyEvents" onMouseClicked="#setMyEventDetails" prefHeight="260.0" prefWidth="125.0" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#createEvent" prefHeight="25.0" prefWidth="131.0" text="Create Event" textAlignment="CENTER" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="204.0" text="Back" textAlignment="CENTER" />
+               </children></VBox>
+            <HBox prefHeight="500.0" prefWidth="1003.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="603.0" prefWidth="446.0" spacing="5.0" style="-fx-background-color: black;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="887.0" prefWidth="445.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="447.0" style="-fx-border-color: white; -fx-border-radius: 30;">
+                                 <children>
+                                    <Label fx:id="labelName" alignment="TOP_CENTER" text="Name">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/searchUsersIcon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelOrganizer" text="Organizer" textAlignment="CENTER" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="110.0" prefWidth="445.0" style="-fx-border-color: white; -fx-border-radius: 30;">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/dateIcon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelDate" text="Date">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                       <children>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/locationIcon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="labelLocation" text="Location">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="384.0" prefWidth="447.0" style="-fx-border-color: white; -fx-border-radius: 30;">
+                                 <children>
+                                    <Label fx:id="labelDescription" text="Description">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="307.0" prefWidth="450.0">
+                           <children>
+                              <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#joinEvent" prefHeight="25.0" prefWidth="551.0" text="Join Event" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ListView fx:id="listViewParticipants" prefHeight="500.0" prefWidth="125.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

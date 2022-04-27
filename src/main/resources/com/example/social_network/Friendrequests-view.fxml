@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.FriendRequestsController">
+   <children>
+      <HBox prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="187.0" spacing="20.0">
+               <children>
+                  <Button id="button" fx:id="buttonAprove" mnemonicParsing="false" onAction="#acceptFriendRequest" prefHeight="35.0" prefWidth="110.0" stylesheets="@style/style.css" text="Accept">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Button id="button" fx:id="buttonCancel" mnemonicParsing="false" onAction="#cancelFriendRequest" prefHeight="35.0" prefWidth="110.0" stylesheets="@style/style.css" text="Cancel">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Button id="button" fx:id="buttonReject" mnemonicParsing="false" onAction="#rejectFriendRequest" prefHeight="35.0" prefWidth="110.0" stylesheets="@style/style.css" text="Reject">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Button id="button" fx:id="buttonBack" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="110.0" stylesheets="@style/style.css" text="Back">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="523.0" spacing="10.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="137.0" prefWidth="518.0" stylesheets="@style/style.css">
+                    <columns>
+                      <TableColumn fx:id="tableColumnPrenume" prefWidth="100.0" text="First Name" />
+                      <TableColumn fx:id="tableColumnName" prefWidth="100.0" text="Last Name" />
+                        <TableColumn fx:id="tableColumnDate" text="Date" />
+                        <TableColumn fx:id="tableColumnStatus" text="Status" />
+                    </columns>
+                  </TableView>
+                  <Pagination fx:id="pagination" prefHeight="485.0" prefWidth="518.0" />
+                  <TableView fx:id="tableViewEvents" prefHeight="499.0" prefWidth="518.0" stylesheets="@style/style.css">
+                    <columns>
+                      <TableColumn fx:id="tableColumnEventName" prefWidth="100.0" text="Name" />
+                      <TableColumn fx:id="tableColumnEventDate" text="Date" />
+                        <TableColumn fx:id="tableColumnLocation" prefWidth="100.0" text="Location" />
+                        <TableColumn fx:id="tableColumnDescription" prefWidth="261.9999694824219" text="Description" />
+                    </columns>
+                  </TableView>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
